@@ -17,7 +17,7 @@ function MenuDataService($http, ApiBasePath) {
 		});
 	};
   service.getItemsForCategory=function(categoryShortName){
-    return $http({method: "GET",url: (ApiBasePath + "/menu_items.json/category="+categoryShortName)}).then(function (response) {
+    return $http({method: "GET",url: (ApiBasePath + "/menu_items.json",params: {category: categoryShortName})}).then(function (response) {
       returnedMenuItems=response.data.menu_items;
       return returnedMenuItems;
     });
