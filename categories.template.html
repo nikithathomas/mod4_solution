@@ -1,0 +1,6 @@
+<h3>All Categories</h3>
+<ol>
+  <li style="text-decoration:underline;color:blue" ng-repeat="item in $ctrl.items" ui-sref="itemMenu({itemName:item.short_name})">
+{{item.name}}
+  </li>
+</ol>
